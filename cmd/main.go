@@ -10,7 +10,7 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	mfs "github.com/Hacky-DH/moosefs-client"
+	mfs "github.com/noworrieseh/moosefs-client"
 	"github.com/golang/glog"
 	"github.com/google/subcommands"
 	"os"

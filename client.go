@@ -60,8 +60,17 @@ func NewClientFull(addr, password, subDir string) (c *Client, err error) {
 	return
 }
 
+
+func (c *Client) Lookup(path string) (parent uint32, info *FileInfo, err error) {
+	return c.lookup(path)
+}
+
 func NewClient() (c *Client, err error) {
 	return NewClientFull(masterAddr, masterPsw, masterSubdir)
+}
+
+func (c *Client) MasterConn() (m *MAClient) {
+	return c.mc
 }
 
 // close client, not file
